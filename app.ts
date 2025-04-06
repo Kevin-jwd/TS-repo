@@ -7,7 +7,7 @@ interface Student {
     stdId: number;
     stdName: string;
     age: number;
-    gender: Gender;
+    gender: "male" | "female";
     course: string;
     completed: boolean;
     setName: (name: string) => void;
@@ -17,7 +17,7 @@ class MyStudent implements Student {
     stdId: number;
     stdName: string;
     age: number;
-    gender: Gender;
+    gender: "male";
     course: string;
     completed: boolean;
 
@@ -38,3 +38,16 @@ class MyStudent implements Student {
 
 const myInstance = new MyStudent();
 myInstance.setName("do");
+
+let numStr: number | string = "100";
+
+function convertToString(val: number | string) {
+    return String(val);
+}
+
+function convertToNumber(val: number | string) {
+    return Number(val);
+}
+
+console.log(convertToString(numStr))
+console.log(convertToNumber(numStr))

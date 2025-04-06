@@ -20,3 +20,12 @@ class MyStudent {
 }
 const myInstance = new MyStudent();
 myInstance.setName("do");
+let numStr = "100";
+function convertToString(val) {
+    return String(val);
+}
+function convertToNumber(val) {
+    return Number(val);
+}
+console.log(convertToString(numStr));
+console.log(convertToNumber(numStr));
